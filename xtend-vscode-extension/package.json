@@ -8,12 +8,12 @@
     "license": "SEE LICENSE IN LICENSE.txt",
     "homepage": "https://github.com/PizzaFactory/xtend-ide-extensions/blob/master/xtend-vscode-extension/README.md",
     "bugs": {
-      "url": "https://github.com/PizzaFactory/xtend-ide-extensions/issues"
+        "url": "https://github.com/PizzaFactory/xtend-ide-extensions/issues"
     },
     "repository": {
-		"type": "git",
-		"url": "https://github.com/PizzaFactory/xtend-ide-extensions.git"
-    },   
+        "type": "git",
+        "url": "https://github.com/PizzaFactory/xtend-ide-extensions.git"
+    },
     "engines": {
         "vscode": "^1.32.0"
     },
@@ -21,22 +21,34 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "xtend",
-            "aliases": ["Xtend", "xtend"],
-            "extensions": [".xtend"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "xtend",
-            "scopeName": "source.Xtend",
-            "path": "./syntaxes/xtend.tmLanguage.json"
-        }],
+        "languages": [
+            {
+                "id": "xtend",
+                "aliases": [
+                    "Xtend",
+                    "xtend"
+                ],
+                "extensions": [
+                    ".xtend"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "xtend",
+                "scopeName": "source.Xtend",
+                "path": "./syntaxes/xtend.tmLanguage.json"
+            }
+        ],
         "snippets": [
-			{
-				"language": "xtend",
-				"path": "./snippets.json"
-			}
-		]
+            {
+                "language": "xtend",
+                "path": "./snippets.json"
+            }
+        ]
+    },
+    "devDependencies": {
+        "vsce": "^1.66.0"
     }
 }
