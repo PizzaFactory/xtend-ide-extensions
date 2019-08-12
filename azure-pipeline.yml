@@ -1,0 +1,29 @@
+
+trigger:
+  branches:
+    include:
+    - pizzafactory
+  tags:
+    include:
+    - v*
+
+jobs:
+- job: xtend_vscode_extension
+  steps:
+
+#  - script: ./gradlew assemble
+#    workingDirectory: xtend-language-server
+#    displayName: Building the language server.
+
+  - script: |
+      npm install
+      npx vsce package
+    workingDirectory: xtend-vscode-extension
+    displayName: Building and packaging the VSIX package.
+ 
+  - task: GitHubRelease@0
+    condition: startsWith(variables['Build.SourceBranch'], 'refs/tags/v')
+    inputs:
+      gitHubConnection: PizzaFactory-PersonalAccessToken
+      repositoryName: PizzaFactory/xtend-ide-extensions
+      assets: xtend-vscode-extension/xtend-lang-*.vsix 
