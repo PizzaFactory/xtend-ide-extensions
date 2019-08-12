@@ -3,15 +3,16 @@
     "displayName": "Xtend",
     "description": "Xtend Programming Language",
     "version": "0.1.0",
-    "publisher": "GrammarCraft",
+    "author": "GrammarCraft",
+    "publisher": "PizzaFactory",
     "license": "SEE LICENSE IN LICENSE.txt",
-    "homepage": "https://github.com/kuniss/xtend-ide-extensions/blob/master/xtend-vscode-extension/README.md",
+    "homepage": "https://github.com/PizzaFactory/xtend-ide-extensions/blob/master/xtend-vscode-extension/README.md",
     "bugs": {
-      "url": "https://github.com/kuniss/xtend-ide-extensions/issues"
+      "url": "https://github.com/PizzaFactory/xtend-ide-extensions/issues"
     },
     "repository": {
 		"type": "git",
-		"url": "https://github.com/kuniss/xtend-ide-extensions.git"
+		"url": "https://github.com/PizzaFactory/xtend-ide-extensions.git"
     },   
     "engines": {
         "vscode": "^1.32.0"
