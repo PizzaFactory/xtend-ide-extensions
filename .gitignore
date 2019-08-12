@@ -1,1 +1,3 @@
 xtend-vscode-extension/vsc-extension-quickstart.md
+node_modules/
+*.vsix
